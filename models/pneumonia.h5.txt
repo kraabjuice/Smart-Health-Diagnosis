@@ -1,0 +1,56 @@
+filename: pneumonia.h5
+backend: tensorflow
+keras_version: 2.3.0-tf
+model_config: {"class_name": "Sequential", "config": {"name": "sequential_5", "layers": [{"class_name": "Conv2D", "config": {"name": "conv2d_19", "trainable": true, "batch_input_shape": [null, 36, 36, 1], "dtype": "float32", "filters": 64, "kernel_size": [3, 3], "strides": [1, 1], "padding": "valid", "data_format": "channels_last", "dilation_rate": [1, 1], "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null}}, "bias_initializer": {"class_name": "Zeros", "config": {}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name": "BatchNormalization", "config": {"name": "batch_normalization_18", "trainable": true, "dtype": "float32", "axis": [3], "momentum": 0.99, "epsilon": 0.001, "center": true, "scale": true, "beta_initializer": {"class_name": "Zeros", "config": {}}, "gamma_initializer": {"class_name": "Ones", "config": {}}, "moving_mean_initializer": {"class_name": "Zeros", "config": {}}, "moving_variance_initializer": {"class_name": "Ones", "config": {}}, "beta_regularizer": null, "gamma_regularizer": null, "beta_constraint": null, "gamma_constraint": null}}, {"class_name": "MaxPooling2D", "config": {"name": "max_pooling2d_18", "trainable": true, "dtype": "float32", "pool_size": [2, 2], "padding": "valid", "strides": [2, 2], "data_format": "channels_last"}}, {"class_name": "Dropout", "config": {"name": "dropout_18", "trainable": true, "dtype": "float32", "rate": 0.2, "noise_shape": null, "seed": null}}, {"class_name": "Conv2D", "config": {"name": "conv2d_20", "trainable": true, "dtype": "float32", "filters": 128, "kernel_size": [3, 3], "strides": [1, 1], "padding": "valid", "data_format": "channels_last", "dilation_rate": [1, 1], "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null}}, "bias_initializer": {"class_name": "Zeros", "config": {}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name": "BatchNormalization", "config":
+ {"name": "batch_normalization_19", "trainable": true, "dtype": "float32", "axis": [3], "momentum": 0.99, "epsilon": 0.001, "center": true, "scale": true, "beta_initializer":
+ {"class_name": "Zeros", "config": {}},
+ "gamma_initializer": {"class_name": "Ones", "config": {}},
+ "moving_mean_initializer": {"class_name": "Zeros", "config": {}}, "moving_variance_initializer": 
+{"class_name": "Ones", "config": {}}, "beta_regularizer": null, "gamma_regularizer": null, "beta_constraint": null, "gamma_constraint": null}},
+ {"class_name": "MaxPooling2D", "config": {"name": "max_pooling2d_19", "trainable": true, "dtype": "float32", "pool_size": [2, 2], "padding": "valid", "strides": [2, 2], "data_format": "channels_last"}},
+ {"class_name": "Dropout", "config": 
+{"name": "dropout_19", "trainable": true, "dtype": "float32", "rate": 0.2, "noise_shape": null, "seed": null}}, {"class_name": "Conv2D", "config":
+ {"name": "conv2d_21", "trainable": true, "dtype": "float32", "filters": 256, "kernel_size": [3, 3], "strides": [1, 1], "padding": "valid", "data_format": "channels_last", "dilation_rate": [1, 1], "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config":
+ {"seed": null}}, "bias_initializer": {"class_name": "Zeros", "config": {}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name": "BatchNormalization", "config": {"name": "batch_normalization_20", "trainable": true, "dtype": "float32", "axis": [3], "momentum": 0.99, "epsilon": 0.001, "center": true, "scale": true, "beta_initializer": 
+{"class_name": "Zeros", "config": {}}, "gamma_initializer": {"class_name": "Ones", "config": {}}, "moving_mean_initializer": {"class_name": "Zeros", "config": {}}, "moving_variance_initializer": {"class_name": "Ones", "config": {}}, "beta_regularizer": null, "gamma_regularizer": null, "beta_constraint": null, "gamma_constraint": null}}, 
+{"class_name": "MaxPooling2D", "config": {"name": "max_pooling2d_20", "trainable": true, "dtype": "float32", "pool_size": [2, 2], "padding": "valid", "strides": [2, 2], "data_format": "channels_last"}}, {"class_name": "Dropout", "config":
+ {"name": "dropout_20", "trainable": true, "dtype": "float32", "rate": 0.2, "noise_shape": null, "seed": null}}, {"class_name": "Flatten", "config": {"name": "flatten_4", "trainable": true, "dtype": "float32", "data_format": "channels_last"}},
+ {"class_name": "Dense", "config": {"name": "dense_8", "trainable": true, "dtype": "float32", "units": 256,
+ "activation": "relu", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config":
+ {"seed": null}}, "bias_initializer": {"class_name": "Zeros", "config": {}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}, {"class_name":
+ "Dense", "config": {"name": "dense_9", "trainable": true, "dtype": "float32", "units": 2, "activation": "softmax", "use_bias": true, "kernel_initializer": {"class_name": "GlorotUniform", "config": {"seed": null}}, "bias_initializer": {"class_name": "Zeros", "config": {}}, "kernel_regularizer": null, "bias_regularizer": null, "activity_regularizer": null, "kernel_constraint": null, "bias_constraint": null}}], "build_input_shape": [null, 36, 36, 1]}}
+training_config: {"loss": "categorical_crossentropy", "metrics": ["accuracy"], "weighted_metrics": null, "loss_weights": null, "sample_weight_mode": null, "optimizer_config": {"class_name": "Adam", "config": {"name": "Adam", "learning_rate": 0.0010000000474974513, "decay": 0.0, "beta_1": 0.8999999761581421, "beta_2": 0.9990000128746033, "epsilon": 1e-07, "amsgrad": false}}}
+
+
+
+
+
+Certainly! The information you provided is a YAML-like configuration for a deep learning model implemented using the TensorFlow framework with the Keras API. Let's break down the key components of this configuration:
+
+1. **Filename:** `pneumonia.h5`
+   - This indicates that the model is saved in the Hierarchical Data Format (H5) file format. This is a common format for storing models in TensorFlow and Keras.
+
+2. **Backend:** `tensorflow`
+   - Specifies that the TensorFlow framework is used as the backend for the deep learning model. TensorFlow is a popular open-source machine learning framework.
+
+3. **Keras Version:** `2.3.0-tf`
+   - Specifies the version of the Keras API that was used to build and save the model.
+
+4. **Model Configuration:**
+   - The model configuration is provided in JSON-like format under the key `model_config`. It specifies a Sequential model, which is a linear stack of layers. The layers are defined with their types, configurations, and parameters. Here's a summary of the layers:
+      - Convolutional Layer with 64 filters, kernel size 3x3, and ReLU activation.
+      - Batch Normalization Layer after the first convolutional layer.
+      - MaxPooling Layer with a pool size of 2x2.
+      - Dropout Layer with a dropout rate of 0.2.
+      - Additional Convolutional, Batch Normalization, MaxPooling, and Dropout Layers.
+      - Flatten Layer to flatten the output.
+      - Dense Layer with 256 units and ReLU activation.
+      - Dense Layer with 2 units and softmax activation, indicating a binary classification task.
+
+5. **Training Configuration:**
+   - The training configuration is provided under the key `training_config`. It specifies:
+      - Loss function: Categorical Crossentropy
+      - Metrics: Accuracy
+      - Optimizer: Adam optimizer with a learning rate of 0.001 and default parameters.
+
+This configuration represents a Convolutional Neural Network (CNN) designed for binary classification, likely for detecting pneumonia. If you have specific questions about any part of the configuration or if you need help with a particular aspect of using this model, feel free to ask!

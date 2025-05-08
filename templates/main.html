@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="og:title" content="Multiple Disease Predictor">
+  <meta name="author" content="Salman Siyad">
+  <meta name="og:image" content="static/logo1.png">
+  <meta name="Keywords" content="Flask, Machine Learning, Deep Learning, Artificial Intelligence, AI, ML,DL, Web Development">
+  <meta name="description" content="A Machine Learning and Deep Learning based webapp for Multiple Disease Prediction.">
+  <title>Disease Predictor</title>
+  <link rel="icon" href="{{ url_for('static', filename = 'logo1.png') }}" type="image/icon type">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <style>
+    html, body{ height:100%; margin:0; }
+header{ height:50px;}
+footer{ height:75px; background:rgba(0, 0, 0, 0.1); }
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s; /* Add a smooth transition effect for color changes */
+  }
+
+ 
+
+  /* Main content styles */
+  .content {
+    margin-top: 60px;
+    padding: 20px;
+  }
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column; 
+  background-image: url({{url_for('static',filename='img.jpg')}});
+ 
+}
+
+footer{
+  padding:10px;
+  margin-top:auto;
+  margin-bottom: auto; 
+}
+.card-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency as needed */
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+  }
+
+  /* Card styles */
+  .card {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust transparency as needed */
+    box-shadow: 0 0 5px black;
+    margin: 5px;
+    padding: 15px;
+    color: white;
+    backdrop-filter: blur(10px) !important;
+  }
+  h1{
+    color: white;
+    font-family: monospace;
+  }
+ a:hover{
+  color: rgb(42 8 70);;
+ }
+
+
+ 
+  </style>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px) !important;">
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="navbar-collapse collapse" id="navbarNav">
+       <ul class="navbar-nav ml-auto",>
+         <li class="nav-item active">
+           <a href="/" class="nav-link">Home</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link" href="/diabetes">Diabetes</a>
+         </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="/liver">Liver</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/malaria">Malaria</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/pneumonia">Pneumonia</a>
+          </li>
+       </ul>
+     </div>
+</nav>
+	<br>
+<br>
+<br>
+<br>
+<main>
+	<div class="container-fluid" style="margin-bottom: 20px;">
+	{% block content %}
+
+	{% endblock %}
+    </div>
+  </main>
+  <footer style="height:100px">
+  <center>
+      
+  </center>
+  </footer>
+</body>
+</html>
